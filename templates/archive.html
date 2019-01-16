@@ -1,0 +1,8 @@
+<!-- archive.html -->
+<p style="background-image: url(img/1.jpg);"></p>
+{% for post in posts%}
+	<h2>{{post.title}}</h2>
+	<p>{{post.timestamp}}</p>
+	<p>{{post.body}}</p>
+	<hr/>
+{% endfor %}
