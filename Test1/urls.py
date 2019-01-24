@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url
 from blog.views import index
-from blog.views import archive
+from blog.views import archive, create_blogpost
 
 
 admin.autodiscover()
@@ -24,5 +24,7 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index/', index),
-    url(r'^archive/', archive)
+    url(r'^archive/', archive),
+    url(r'^create/', create_blogpost)
 ]
+

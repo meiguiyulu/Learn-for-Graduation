@@ -1,5 +1,14 @@
 <!-- archive.html -->
-<p style="background-image: url(img/1.jpg);"></p>
+
+<form action="/blog/create/" method="post"> {% csrf_token %}
+	Title:
+	<input type="text" name="title"/><br />
+	Body:
+	<textarea name="body" rows="3" cols="60"></textarea><br />
+	<input type="submit" />
+</form>
+<hr />
+
 {% for post in posts%}
 	<h2>{{post.title}}</h2>
 	<p>{{post.timestamp}}</p>
